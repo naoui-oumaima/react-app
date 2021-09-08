@@ -1,9 +1,11 @@
 import React, { useRef } from 'react';
+import { useHistory } from 'react-router';
 import Bids from '../components/bids';
 // import Carousel from 'react-elastic-carousel';
 
 const Home =() => {
     const ref = useRef(null);
+    const history=useHistory()
     const scrollRight = () => {
         ref.current.scrollLeft += 200;
     };
@@ -53,7 +55,7 @@ const Home =() => {
                     </div> */}
                     {/* <Carousel breakPoints={breakPoints}> */}
                         {sellers.map(seller => 
-                        <div className="seller">
+                        <div className="seller" onClick={()=>history.push("/profile")}>
                             <div className="number">
                                 {seller.num}
                             </div>

@@ -402,6 +402,7 @@ h3 {
 // }
 .seller {
   // @extend %seller-shared;
+  cursor: pointer;
   margin: 0px 10px;
   min-width: 180px;
   max-width: 180px;
@@ -521,6 +522,7 @@ h3 {
 }
 
 .bid {
+  cursor: pointer;
   position: static;
   width: 233px;
   height: 319px;

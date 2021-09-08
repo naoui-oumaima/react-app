@@ -1,6 +1,8 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 
 const Bids = () =>{
+    const history=useHistory()
     const bids = [
         {src:"img/bid1.png",info1:"Abstract Smoke Red Blue",info2:"1.25 ",like:"img/like.png",nblikes:92},
         {src:"img/bid2.png",info1:"Mountain Landscape",info2:"0.20 ",like:"img/like.png",nblikes:25},
@@ -15,7 +17,7 @@ const Bids = () =>{
     return (
         <div className='containerbids'>
             <div className='rowbids'>
-                {bids.map(bid =><div className='bid'>
+                {bids.map(bid =><div className='bid'  onClick={()=>history.push("/item")}>
                     <img src={bid.src} alt=""></img>
                     <p className='bidinfo1'>{bid.info1}</p>
                     <div className='row'>
