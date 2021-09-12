@@ -2,16 +2,21 @@ import React from "react";
 import Bids from "../components/bids";
 import { FormControl } from "react-bootstrap";
 import { FaSistrix } from 'react-icons/fa';
+import { useSelector } from "react-redux";
 
 
 const Profile = () => {
+
+  const state = useSelector ((state)=>state.seller);
+  console.log(state.seller);
+
   return (
     <div className="body">
       <div className="infoProfile">
         <div>
-          <img src="img/miaprofile.png" alt="" />
+          <img src={state.seller.img} alt="" />
         </div>
-        <h1>Mia Ayana</h1>
+        <h1>{state.seller.name}</h1>
       </div>
       <img className="couv" src="img/couv.png" alt="" />
       <div className="input_select">

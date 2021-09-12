@@ -2,9 +2,15 @@ import React, { useState } from "react";
 import { Nav } from "react-bootstrap";
 import Modall from "../components/Modal";
 import {FaInstagram, FaTelegramPlane, FaTwitter} from 'react-icons/fa';
+import { useSelector } from "react-redux";
+
 
 
 const Item = () => {
+
+  const state = useSelector ((state)=>state.item);
+  
+  // console.log("item",state.value)
   const [show, setShow] = useState(false);
   const [CheckoutShow, setCheckoutShow] = useState(false);
 
@@ -16,6 +22,7 @@ const Item = () => {
     handleClose();
     handleChekout();
   };
+
   const affdetails = () => {
     const btn = document.querySelector("#offers");
     btn.style.display = "none";
@@ -57,10 +64,10 @@ const Item = () => {
             </div>
             <div className="customModalBodyBody">
               <div>
-                <img src="img/item.png" alt="" />
+                <img src={state.item.src} alt="" />
                 <div>
-                  <p className="p1">Mia Ayana</p>
-                  <p className="p2">Abstact Smoke Red Blue</p>
+                  <p className="p1">{state.item.creator}</p>
+                  <p className="p2">{state.item.info1}</p>
                 </div>
               </div>
               <div className="price">4.5 ETH</div>
@@ -85,9 +92,9 @@ const Item = () => {
           <h2>Payment Successful</h2>
         </div>
         <div className="payementModalBody">
-          <img src="img/item.png" alt="" />
+          <img src={state.item.src} alt="" />
           <div>
-            You successfully purchased Abstact Smoke Red Blue from Mia Ayana
+            You successfully purchased {state.item.info1} from {state.item.creator}
           </div>
         </div>
         <div className="payementModalFooter">
@@ -102,24 +109,24 @@ const Item = () => {
       <div className="body">
         <div className="row">
           <div className="col colsep">
-            <img src="img/item.png" alt="" className="itemimg"></img>
+            <img src={state.item.src} alt="" className="itemimg"></img>
           </div>
           <div className="col itemcol2">
             <div className="description">
               <div className="iteminfo1 ">
                 <div>
-                  <h1>Abstact Smoke Red Blue</h1>
+                  <h1>{state.item.info1}</h1>
                   <p>
                     From <b>4.5 ETH</b> . 20 of 25 available
                   </p>
                 </div>
                 <div className="likecontain">
-                  <p> 92</p>
+                  <p> {state.item.nblikes}</p>
                 </div>
               </div>
               <p className="creator">Creator</p>
-              <p>
-                <img src="img/creator.png" alt="" /> <b> Mia Ayana</b>
+              <p className="creatorinfo">
+                <img src={state.item.creatorimg} alt=""/> <b> {state.item.creator}</b>
               </p>
               <div>
                 <Nav className="inav" defaultActiveKey="#details">
