@@ -3,8 +3,16 @@
     @media only screen and (max-width: 1150px) {
       @content;
     }
+  } @else if $size == 1120px {
+    @media only screen and (max-width: 1120px) {
+      @content;
+    }
   } @else if $size == 991px {
     @media only screen and (max-width: 991px) {
+      @content;
+    }
+  } @else if $size == 900px {
+    @media only screen and (max-width: 900px) {
       @content;
     }
   } @else if $size == 852px {
@@ -29,6 +37,11 @@
     }
   } @else if $size == 462px {
     @media only screen and (max-width: 462px) {
+      @content;
+    }
+  }
+  @else if $size == 390px {
+    @media only screen and (max-width: 390px) {
       @content;
     }
   }
@@ -70,8 +83,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   min-height: 110px;
   padding-left: 40px;
   padding-right: 50px;
@@ -86,6 +99,13 @@ button {
 
 .nav {
   max-width: 550px;
+  @include media-query(665px) {
+    padding: 5%;
+  }
+}
+.btnnavbar {
+  display: flex;
+  flex-direction: row;
 }
 
 .logo {
@@ -153,9 +173,10 @@ button {
   }
 }
 
-.navbartoggle{
-width:30px;
-height: 30px;
+.navbartoggle {
+  width: 30px;
+  height: 30px;
+  padding: 0px;
 }
 
 .btncreate {
@@ -278,6 +299,9 @@ height: 30px;
   &:hover {
     box-shadow: 0px 0px 10px #c91cc3;
   }
+  @include media-query(462px) {
+    left: 160px;
+  }
 }
 
 .email {
@@ -298,6 +322,9 @@ height: 30px;
     border-color: transparent;
     box-shadow: 0 0 5px #4b4a4a00;
     color: rgba(255, 255, 255, 0.904);
+  }
+  @include media-query(462px) {
+    width: 200px;
   }
 }
 
@@ -395,6 +422,10 @@ h3 {
   @include media-query(896px) {
     width: 75%;
   }
+  @include media-query(500px) {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
 }
 
 .topSellers {
@@ -442,12 +473,16 @@ h3 {
   @include media-query(852px) {
     max-width: 625px;
   }
+  @include media-query(500px) {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 }
 
 .titre {
   white-space: nowrap;
-  width: 116px;
-  height: 42px;
+  // width: 116px;
+  // height: 42px;
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
@@ -456,6 +491,7 @@ h3 {
   @include media-query(500px) {
     font-size: 20px;
     line-height: 30px;
+    margin-bottom: 0px;
   }
 }
 
@@ -479,6 +515,11 @@ h3 {
   height: 200px;
   background: #2a2d3a;
   border-radius: 20px;
+  @include media-query(500px) {
+    min-width: 140px;
+    max-width: 140px;
+    // height: 165px;
+  }
 }
 
 // .seller1{
@@ -496,6 +537,11 @@ h3 {
   // justify-content: center;
   text-align: center;
   padding-top: 3%;
+  @include media-query(500px) {
+    height: 25px;
+    width: 25px;
+    padding-top: 0px;
+  }
 }
 
 .infoseller {
@@ -570,6 +616,9 @@ h3 {
   margin: 30px auto 0px auto;
   @include media-query(1150px) {
     max-width: 800px;
+  }
+  @include media-query(500px) {
+    margin-top: 0px;
   }
 }
 
@@ -716,10 +765,10 @@ h3 {
     max-width: 800px;
   }
   @include media-query(500px) {
-    margin-top: 222px;
+    margin-top: 150px;
   }
   .titre {
-    display:none;
+    display: none;
     @include media-query(500px) {
       display: flex;
     }
@@ -879,20 +928,38 @@ h3 {
 .itemimg {
   width: 542px;
   height: 542px;
-  margin: 79px 111px 58px 165px;
+  margin: 65px 15px 0px 15px;
+  @include media-query(1120px) {
+    width: 400px;
+    height: 400px;
+  }
+  @include media-query(900px) {
+    width: 350px;
+    height: 350px;
+  }
+  @include media-query(390px) {
+    width: 320px;
+    height: 320px;
+  }
 }
 
 .colsep {
   border-right: 2px solid rgb(56, 55, 55);
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+.itemcol2 {
+  display: flex;
+  justify-content: flex-start;
+  padding: 15px;
 }
 
 .description {
   padding: 0px;
   // position: absolute;
-  width: 423px;
-  height: 487px;
-  // left: 861px;
-  margin-left: 40px;
+  width: 450px;
+  margin-left: 2%;
   margin-top: 45px;
   .iteminfo1 {
     display: flex;
@@ -910,6 +977,15 @@ h3 {
       letter-spacing: 0em;
       text-align: left;
     }
+  }
+  @include media-query(1120px) {
+    width: 350px;
+  }
+  @include media-query(900px) {
+    width: 300px;
+  }
+  @include media-query(390px) {
+    margin-left: 2%;
   }
 }
 
@@ -999,7 +1075,7 @@ h3 {
   flex: none;
   order: 4;
   flex-grow: 0;
-  // margin: 30px 0px;
+  margin-bottom: 30px;
   .makeofferbtn {
     display: flex;
     flex-direction: row;
@@ -1022,6 +1098,9 @@ h3 {
     &:hover {
       background: transparent;
       box-shadow: 0px 0px 10px #c91cc3;
+    }
+    @include media-query(1120px) {
+      width: 145px;
     }
   }
 
@@ -1050,6 +1129,9 @@ h3 {
     &:focus,
     &:hover {
       box-shadow: 0px 0px 10px #c91cc3;
+    }
+    @include media-query(1120px) {
+      width: 145px;
     }
   }
 }
@@ -1458,15 +1540,19 @@ h3 {
 // Create
 
 .createpage {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
   .titre {
     margin-top: 35px;
-    margin-left: 415px;
+    // margin-left: 415px;
   }
   Form {
     // position: absolute;
     width: 610px;
     // height: 999px;
-    margin-left: 415px;
+    // margin-left: 415px;
     .formlabel {
       font-weight: 600;
       font-size: 24px;

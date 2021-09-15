@@ -10,10 +10,11 @@ const Topbar = () => {
       expand="lg"
       bg="dark"
       variant="dark"
-      className="navbar">
+      className="navbar"
+    >
       <Link to="/">
         <img src="img/logo.png" alt="" className="logo"></img>
-        <img src='img/logomobile.png' alt="" className="logomobile"></img>
+        <img src="img/logomobile.png" alt="" className="logomobile"></img>
       </Link>
       <div className="navbarsearch">
         <FaSistrix />
@@ -24,7 +25,10 @@ const Topbar = () => {
           aria-label="Search"
         ></FormControl>
       </div>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" className="navbartoggle"/>
+      <Navbar.Toggle
+        aria-controls="responsive-navbar-nav"
+        className="navbartoggle"
+      />
       <Navbar.Collapse id="responsive-navbar-nav" className="nav">
         <Nav className="me-auto">
           <Nav.Link href="#" className="menu">
@@ -36,10 +40,12 @@ const Topbar = () => {
           <Nav.Link href="#Following" className="menu">
             Following
           </Nav.Link>
-          <Link to="/createitem" className="link">
-            <button className="btncreate">Create</button>{" "}
-          </Link>
-          <button className="btnconnect">connect</button>
+          <div className="btnnavbar">
+            <Link to="/createitem" className="link">
+              <button className="btncreate">Create</button>{" "}
+            </Link>
+            <button className="btnconnect">connect</button>
+          </div>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
