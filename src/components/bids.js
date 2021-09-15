@@ -25,8 +25,14 @@ const Bids = () =>{
                 let action = { type: "SET_ITEM", value: { item: bid } };
                 dispatch(action);
                 history.push("/item")}}>
-                    <img src={bid.src} alt=""></img>
-                    <p className='bidinfo1'>{bid.info1}</p>
+                    <img src={bid.src} alt="" className='bidimg'></img>
+                    {bid.info1.length >= 20 ? (
+                                <p className='bidinfo1'>
+                                  {bid.info1.slice(0, 19)}...
+                                </p>
+                              ) : (
+                                <p className='bidinfo1'>{bid.info1}</p>
+                              )}
                     <div className='row'>
                         <p className='bidinfo2 col'><b>{bid.info2}</b>ETH</p>
                         <div className='likes col'>

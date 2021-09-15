@@ -1,13 +1,11 @@
 import React from "react";
 import Bids from "../components/bids";
 import { FormControl } from "react-bootstrap";
-import { FaSistrix } from 'react-icons/fa';
+import { FaSistrix } from "react-icons/fa";
 import { useSelector } from "react-redux";
 
-
 const Profile = () => {
-
-  const state = useSelector ((state)=>state.seller);
+  const state = useSelector((state) => state.seller);
   console.log(state.seller);
 
   return (
@@ -18,23 +16,25 @@ const Profile = () => {
         </div>
         <h1>{state.seller.name}</h1>
       </div>
-      <img className="couv" src="img/couv.png" alt="" />
+      <div className="couv"><img src="img/couv.png" alt="" /></div>
+      
       <div className="input_select">
-      <div className="searchprof">
-            <FaSistrix/>
-                <FormControl
-                    type="search"
-                    placeholder="Search Item Here"
-                    className="search"
-                    aria-label="Search">
-                </FormControl>
-            </div>
+        <div className="searchprof">
+          <FaSistrix />
+          <FormControl
+            type="search"
+            placeholder="Search Item Here"
+            className="search"
+            aria-label="Search"
+          ></FormControl>
+        </div>
         <select className="searchSelect">
-            <option value="Recently Listed">Recently Listed</option>
-            {/* <option value="Recently Listed">Recently Listed</option> */}
+          <option value="Recently Listed">Recently Listed</option>
+          {/* <option value="Recently Listed">Recently Listed</option> */}
         </select>
       </div>
       <div className="bidsprof">
+        <p className="titre">Items</p>
         <Bids></Bids>
       </div>
       <button className="loadmore">Load More</button>
