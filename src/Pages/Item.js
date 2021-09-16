@@ -87,7 +87,7 @@ const Item = () => {
           </button>
         </div>
       </Modall>
-      <Modall show={CheckoutShow} cancel={handleChekout}>
+      <Modall click={handleChekout} show={CheckoutShow} cancel={handleChekout}>
         <div className="payementModalHeader">
           <h2>Payment Successful</h2>
         </div>

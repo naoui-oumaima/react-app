@@ -90,8 +90,9 @@ button {
   border-bottom: 2px solid rgb(56, 55, 55);
   width: 100%;
   margin: 0 auto;
+  z-index: 1001;
   @include media-query(758px) {
-    padding: 0px;
+    padding: 15px 0px 0px;
     border-bottom: 0px solid rgb(56, 55, 55);
   }
 }
@@ -486,7 +487,15 @@ h3 {
   font-weight: 600;
   font-size: 28px;
   line-height: 42px;
-  margin-left: 5%;
+  margin:auto;
+  width: 1028px;
+  padding-left: 5px;
+  @include media-query(1150px) {
+    width: 800px;
+  }
+  @include media-query(852px) {
+    max-width: 625px;
+  }
   @include media-query(500px) {
     font-size: 20px;
     line-height: 30px;
@@ -579,7 +588,7 @@ h3 {
   width: 40px;
   height: 40px;
   margin-left: 0px;
-  margin-top: 152px;
+  margin-top: 115px;
   z-index: 1000;
   @include media-query(852px) {
     display: none;
@@ -591,7 +600,7 @@ h3 {
   width: 40px;
   height: 40px;
   margin-left: 988px;
-  margin-top: 152px;
+  margin-top: 115px;
   z-index: 1000;
   @include media-query(1150px) {
     margin-left: 780px;
@@ -664,6 +673,7 @@ h3 {
   margin: 30px 0px;
   @include media-query(1150px) {
     max-width: 800px;
+    margin-bottom: 13px;
   }
 }
 
@@ -924,18 +934,21 @@ h3 {
 .itemimg {
   width: 542px;
   height: 542px;
-  margin: 65px 15px 0px 15px;
+  margin: 65px 15px 58px 15px;
   @include media-query(1120px) {
     width: 400px;
     height: 400px;
+    margin: 65px 15px 0px 15px;
   }
   @include media-query(900px) {
     width: 350px;
     height: 350px;
+    margin: 45px 15px 0px 15px;
   }
   @include media-query(390px) {
     width: 320px;
     height: 320px;
+    margin: 0px;
   }
 }
 
@@ -1575,6 +1588,8 @@ h3 {
         font-size: 20px;
         line-height: 30px;
         margin-bottom: 0px;
+        margin-top: 35px;
+
       }
     }
     .formcontrol {
