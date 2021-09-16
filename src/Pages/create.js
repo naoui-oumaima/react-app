@@ -8,7 +8,7 @@ const CreateItem = () => {
         <h1 className="titre">Create new Item</h1>
         <Form>
           <Form.Group controlId="formFile">
-            <Form.Label className="formlabel">Upload File</Form.Label>
+            <div className="upFile">Upload File</div>
             <div className="formfile">
               <Form.Control type="file" className="inputfile"/>
               <div className="Upload">

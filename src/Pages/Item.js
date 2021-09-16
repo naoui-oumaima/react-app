@@ -94,7 +94,7 @@ const Item = () => {
         <div className="payementModalBody">
           <img src={state.item.src} alt="" />
           <div>
-            You successfully purchased {state.item.info1} from {state.item.creator}
+            You successfully purchased <b>{state.item.info1} </b>from <b> {state.item.creator}</b>
           </div>
         </div>
         <div className="payementModalFooter">

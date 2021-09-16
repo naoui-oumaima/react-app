@@ -39,8 +39,7 @@
     @media only screen and (max-width: 462px) {
       @content;
     }
-  }
-  @else if $size == 390px {
+  } @else if $size == 390px {
     @media only screen and (max-width: 390px) {
       @content;
     }
@@ -92,8 +91,8 @@ button {
   width: 100%;
   margin: 0 auto;
   @include media-query(758px) {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding: 0px;
+    border-bottom: 0px solid rgb(56, 55, 55);
   }
 }
 
@@ -764,12 +763,12 @@ h3 {
   @include media-query(1150px) {
     max-width: 800px;
   }
-  @include media-query(500px) {
+  @include media-query(758px) {
     margin-top: 150px;
   }
   .titre {
     display: none;
-    @include media-query(500px) {
+    @include media-query(758px) {
       display: flex;
     }
   }
@@ -788,7 +787,6 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    // position: absolute;
     width: 220px;
     height: 220px;
     margin-left: 0px;
@@ -810,26 +808,25 @@ h3 {
     }
   }
   h1 {
-    //styleName: Heading 1;
-    font-family: Poppins;
     font-size: 28px;
-    font-style: normal;
     font-weight: 600;
     line-height: 42px;
-    letter-spacing: 0em;
     text-align: center;
   }
 }
 .input_select {
+  align-items: center;
   width: 993px;
   display: flex;
   flex-direction: row;
-  // justify-content: center;
   margin: 222px auto 30px auto;
   @include media-query(1150px) {
-    max-width: 800px;
+    width: 750px;
   }
-  @include media-query(500px) {
+  // @include media-query(852px) {
+  //   width: 600px;
+  // }
+  @include media-query(758px) {
     display: none;
   }
 }
@@ -841,13 +838,11 @@ h3 {
   align-items: center;
   width: 227px;
   height: 40px;
-  // left: 151px;
   background-color: #1b1a21;
   border-radius: 10px;
   flex: none;
   order: 1;
   flex-grow: 0;
-  // margin: 0px 20px;
   border-color: #1b1a21;
   font-weight: normal;
   font-size: 12px;
@@ -858,6 +853,9 @@ h3 {
   }
   &:focus {
     background-color: #1b1a21;
+  }
+  @include media-query(1150px) {
+    max-width: 180px;
   }
 }
 
@@ -886,14 +884,12 @@ h3 {
     box-shadow: 0 0 5px #4b4a4ad7;
     color: rgba(255, 255, 255, 0.904);
   }
-  @include media-query(991px) {
-    padding: 7px 19px 7px 15px;
-    position: static;
-    width: 218px;
-    height: 40px;
-    left: 42px;
-    top: 0px;
+  @include media-query(1150px) {
+    max-width: 550px;
   }
+  // @include media-query(852px) {
+  //   width: 400px;
+  // }
   .search {
     height: 40px;
     left: 151px;
@@ -1017,6 +1013,9 @@ h3 {
     line-height: 21px;
     letter-spacing: 0em;
     margin-left: 16px;
+  }
+  @include media-query(900px) {
+    margin-left: 9px;
   }
 }
 
@@ -1164,12 +1163,14 @@ h3 {
     background-color: #24252d;
   }
 }
+
 .backDrop {
   height: 100%;
   width: 100%;
   background: rgba(27, 26, 33, 0.9);
   // opacity: 0.9;
 }
+
 .Modall {
   position: fixed;
   z-index: 20;
@@ -1179,6 +1180,7 @@ h3 {
   justify-content: center;
   align-items: center;
 }
+
 .customModal {
   position: absolute;
   width: 584px;
@@ -1188,7 +1190,11 @@ h3 {
   border: 1px solid #2d2e36;
   box-sizing: border-box;
   border-radius: 20px;
+  @include media-query(665px) {
+    width: 320px;
+  }
 }
+
 .customModalHeader {
   display: flex;
   justify-content: center;
@@ -1200,6 +1206,7 @@ h3 {
     margin: 0px;
   }
 }
+
 .customModalBody {
   display: flex;
   flex-direction: column;
@@ -1219,23 +1226,20 @@ h3 {
   flex-grow: 0;
   margin: 30px 0px;
   div {
-    /* Auto Layout */
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-
     position: static;
     width: 506px;
     height: 224px;
-
-    /* Inside Auto Layout */
-
     flex: none;
     order: 1;
     flex-grow: 0;
     // margin: 25px 0px;
+    @include media-query(665px) {
+      width: 291px;
+    }
     .customModalBodyHead {
       p {
         margin: 0px;
@@ -1251,43 +1255,43 @@ h3 {
       align-items: center;
       justify-content: space-between;
       padding: 0px;
-
       position: static;
       width: 506px;
       height: 104px;
       left: 0px;
       top: 59px;
-
-      /* Inside Auto Layout */
-
       flex: none;
       order: 1;
       flex-grow: 0;
       margin: 35px 0px;
+      @include media-query(665px) {
+        width: 291px;
+      }
       div {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        // justify-content: center;
         align-items: center;
         padding: 0px;
-
         position: static;
         width: 292px;
         height: 104px;
-        left: 0px;
-        top: 0px;
-
-        /* Inside Auto Layout */
-
         flex: none;
         order: 0;
         flex-grow: 0;
+        @include media-query(665px) {
+          width: 200px;
+        }
         img {
           position: static;
           width: 107px;
           height: 104px;
           left: 0px;
           top: 0px;
+          @include media-query(665px) {
+            width: 53px;
+            height: 53px;
+          }
         }
         div {
           .p1 {
@@ -1306,35 +1310,31 @@ h3 {
           .p2 {
             position: static;
             width: 170px;
-            height: 21px;
+            // height: 21px;
             left: 0px;
             top: 23px;
-
             font-weight: 400;
             font-size: 14px;
             line-height: 21px;
-            color: #ffffff;
-
-            /* Inside Auto Layout */
-
             flex: none;
             order: 1;
             flex-grow: 0;
             margin: 2px 0px;
+            @include media-query(665px) {
+              width: 122px;
+            }
           }
           display: flex;
           flex-direction: column;
+          justify-content: center;
+
           align-items: flex-start;
           padding: 0px;
-
           position: static;
-          width: 170px;
-          height: 44px;
+          // width: 170px;
+          height: 100%;
           left: 122px;
           top: 30px;
-
-          /* Inside Auto Layout */
-
           flex: none;
           order: 1;
           flex-grow: 0;
@@ -1348,6 +1348,9 @@ h3 {
         align-items: flex-start;
       }
     }
+  }
+  @include media-query(665px) {
+    width: 320px;
   }
 }
 .CheckoutBtnModal {
@@ -1384,22 +1387,20 @@ h3 {
   flex-grow: 0;
   margin: 0px 10px;
 }
+
 .closeBtnModal {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 9px 30px;
-
   position: static;
   width: 140px;
   height: 39px;
   left: 160px;
   top: 0px;
-
   border-radius: 10px;
   border: 1px solid;
-
   background: transparent;
   flex: none;
   order: 1;
@@ -1413,24 +1414,23 @@ h3 {
     box-shadow: 0px 0px 10px #c91cc3;
   }
 }
+
 .customModalFooter {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 0px;
-
   position: static;
   height: 40px;
   left: 143px;
   top: 370px;
-
-  /* Inside Auto Layout */
   margin-bottom: 40px;
   flex: none;
   order: 2;
   flex-grow: 0;
 }
+
 .payementModalHeader {
   display: flex;
   justify-content: center;
@@ -1443,26 +1443,27 @@ h3 {
     color: #ffffff;
   }
 }
+
 .payementModalBody {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0px;
-
   border-top: 1px solid rgb(56, 55, 55);
   border-bottom: 1px solid rgb(56, 55, 55);
-
   position: static;
   width: 586px;
   height: 341px;
   left: 0px;
   top: 61px;
-
   flex: none;
   order: 1;
   flex-grow: 0;
   margin: 25px 0px;
+  @include media-query(665px) {
+    width: 100%;
+  }
   img {
     position: static;
     width: 211px;
@@ -1478,7 +1479,7 @@ h3 {
   div {
     position: static;
     width: 365px;
-    height: 55px;
+    // height: 55px;
     left: 0px;
     top: 236px;
     font-weight: normal;
@@ -1490,8 +1491,12 @@ h3 {
     order: 1;
     flex-grow: 0;
     margin-bottom: 25px;
+    @include media-query(665px) {
+      width: 264px;
+    }
   }
 }
+
 .payementModalFooter {
   display: flex;
   flex-direction: column;
@@ -1542,17 +1547,21 @@ h3 {
 .createpage {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  margin: 0 auto;
   flex-direction: column;
+  width: 50%;
+  padding: 5px;
   .titre {
+    width: 610px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 0px;
     margin-top: 35px;
-    // margin-left: 415px;
+    @include media-query(665px) {
+      display: none;
+    }
   }
   Form {
-    // position: absolute;
-    width: 610px;
-    // height: 999px;
-    // margin-left: 415px;
     .formlabel {
       font-weight: 600;
       font-size: 24px;
@@ -1561,6 +1570,12 @@ h3 {
       order: 0;
       flex-grow: 0;
       margin-top: 55px;
+      margin-bottom: 0px;
+      @include media-query(665px) {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 0px;
+      }
     }
     .formcontrol {
       display: flex;
@@ -1589,6 +1604,9 @@ h3 {
         box-shadow: 0 0 5px #4b4a4a00;
         color: rgba(255, 255, 255, 0.904);
       }
+      @include media-query(665px) {
+        width: 286px;
+      }
     }
     .Createitembtn {
       display: flex;
@@ -1600,7 +1618,8 @@ h3 {
       height: 39px;
       margin-top: 50px;
       margin-bottom: 82px;
-      margin-left: 465px;
+      margin-left: auto;
+      margin-right: auto;
       background: linear-gradient(
         101.12deg,
         #eb1484 27.35%,
@@ -1622,9 +1641,8 @@ h3 {
   // position: absolute;
   cursor: pointer;
   margin: 20px 0px;
-  width: 610px;
+  // width: 610px;
   height: 329px;
-  left: 0px;
   // top: 56px;
   background: #2d2e36;
   border: 1px dashed #ffffff;
@@ -1640,9 +1658,18 @@ h3 {
     font-weight: 600;
     line-height: 30px;
     letter-spacing: 0em;
+    @include media-query(665px) {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+      margin: 32px 44px 20px;
+    }
   }
   img {
     margin-bottom: 20px;
+  }
+  @include media-query(665px) {
+    width: 289px;
   }
 }
 
@@ -1657,5 +1684,21 @@ h3 {
     height: 329px;
     z-index: 3000;
     margin: 0px;
+  }
+}
+.upFile {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-top: 55px;
+  margin-bottom: 0px;
+  @include media-query(665px) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 0px;
+    margin-top: 0px;
   }
 }
