@@ -13,7 +13,8 @@ const Footer = () => {
       <div className="first">
         {/* <div className="col"> */}
         <div className="col1">
-          <img src="img/logo.png" alt=""></img>
+          <img src="img/logo.png" alt="" className="logofooter"></img>
+          <img src="img/lightlogo.png" alt="" className="lightlogofooter"></img>
           <p className="footerp1">Get the lastes Updayes</p>
           <Form>
             <FormControl

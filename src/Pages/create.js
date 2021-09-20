@@ -13,7 +13,8 @@ const CreateItem = () => {
               <Form.Control type="file" className="inputfile"/>
               <div className="Upload">
                 <h3>JPG, PNG, GIF, SVG, WEBM, MP3, MP4. Max 100mb.</h3>
-                <img src="img/file.png" alt=""></img>
+                <img src="img/file.png" alt="" className='darkfile'></img>
+                <img src="img/file1.png" alt="" className='lightfile'></img>
                 <p>Drag and Drop File</p>
                 <p>or browse media on your device</p>
               </div>
