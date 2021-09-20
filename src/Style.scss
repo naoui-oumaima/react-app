@@ -780,7 +780,7 @@ h3 {
   flex: none;
   order: 3;
   flex-grow: 0;
-  margin: 30px auto 0px auto;
+  margin: 30px auto 50px auto;
   @include media-query(1150px) {
     max-width: 800px;
   }
@@ -920,7 +920,7 @@ h3 {
 }
 
 .bidsprof {
-  margin: 0px auto 60px auto;
+  margin: 0px auto 50px auto;
   max-width: 992px;
   @include media-query(1150px) {
     max-width: 800px;
@@ -935,6 +935,7 @@ h3 {
     }
   }
 }
+
 .infoProfile {
   display: flex;
   flex-direction: column;
@@ -976,6 +977,7 @@ h3 {
     text-align: center;
   }
 }
+
 .input_select {
   align-items: center;
   width: 993px;
